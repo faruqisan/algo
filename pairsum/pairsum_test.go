@@ -21,7 +21,7 @@ func TestHasPairWithSum2(t *testing.T) {
 			want: true,
 		},
 		{
-			name: "test has sum",
+			name: "test has no pair",
 			args: args{
 				nums: []int{1, 2, 3, 4, 5, 6, 7, 8, 9},
 				sum:  18,
