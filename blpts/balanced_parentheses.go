@@ -4,6 +4,14 @@ import (
 	"github.com/golang-collections/collections/stack"
 )
 
+var (
+	pair = map[string]string{
+		"{": "}",
+		"(": ")",
+		"[": "]",
+	}
+)
+
 // IsBalanced function check wheter given sets of parentheses are balanced
 // check the unit test for example of parameters
 func IsBalanced(parentheses []string) bool {
@@ -56,12 +64,10 @@ func isMatchingPair(s1, s2 string) bool {
 		result bool
 	)
 
-	if s1 == "{" && s2 == "}" {
-		result = true
-	} else if s1 == "(" && s2 == ")" {
-		result = true
-	} else if s1 == "[" && s2 == "]" {
-		result = true
+	if val, ok := pair[s1]; ok {
+		if val == s2 {
+			return true
+		}
 	}
 
 	return result

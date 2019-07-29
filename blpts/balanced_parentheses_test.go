@@ -19,6 +19,13 @@ func TestIsBalanced(t *testing.T) {
 			want: true,
 		},
 		{
+			name: "Test success 2",
+			args: args{
+				parentheses: []string{"{", "(", "[", "]", ")", "}", "{", "}"},
+			},
+			want: true,
+		},
+		{
 			name: "Test Fail",
 			args: args{
 				parentheses: []string{"{", "(", "]", "}", "}"},
